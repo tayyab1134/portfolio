@@ -32,7 +32,7 @@ const techIcons = {
   "JWT Authentication": (
     <SiJsonwebtokens className="text-yellow-500" size={22} />
   ),
-  
+
   MongoDB: <SiMongodb className="text-green-600" size={22} />,
   "Mongoose ODM": <SiMongoose className="text-red-500" size={22} />,
   "Stripe API": <FaStripe className="text-indigo-500" size={22} />,
@@ -183,11 +183,11 @@ const CaseStudy = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-blue-900/30"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-gray-100"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.02),transparent_50%)]"></div>
       </div>
 
       <div className="relative z-10 pt-20">
@@ -195,67 +195,42 @@ const CaseStudy = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-white hover:text-purple-300 mb-8"
+            className="inline-flex items-center gap-2 text-black hover:text-gray-600 transition-colors mb-8"
           >
             <ArrowLeft size={20} />
             Back to Portfolio
           </Link>
 
           <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-purple-300 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+              <span className="bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
                 {project.title}
               </span>
             </h1>
-            <p className="text-xl text-blue-300">{project.subtitle}</p>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl">
+              {project.subtitle}
+            </p>
           </div>
         </div>
-
-        {/* Video Section */}
-       {/* <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-400/20 rounded-2xl blur-xl"></div>
-            <div className="relative bg-purple-900/40 backdrop-blur-xl rounded-2xl border border-blue-500/20 p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <Play size={24} className="text-purple-200" />
-                <h2 className="text-2xl font-bold text-blue-100">
-                  Project Demo
-                </h2>
-              </div>
-              <div className="aspect-video rounded-lg overflow-hidden bg-blue-800/50">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  title={project.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="w-full h-full rounded-lg"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-        */}
 
         {/* Project Overview */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-400/20 rounded-2xl blur-xl"></div>
-            <div className="relative bg-purple-900/40 backdrop-blur-xl rounded-2xl border border-blue-500/20 p-8">
-              <h2 className="text-3xl font-bold text-blue-100 mb-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-200/50 to-gray-300/50 rounded-2xl blur-xl"></div>
+            <div className="relative bg-gray-50/80 backdrop-blur-xl rounded-2xl border border-gray-200 p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 Project Overview
               </h2>
-              <p className="text-blue-300 text-lg leading-relaxed mb-8">
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
                 {project.overview}
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={project.links.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 text-center"
                 >
                   <ExternalLink size={20} />
                   Live Demo
@@ -264,7 +239,7 @@ const CaseStudy = () => {
                   href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border-2 border-blue-400 text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-black text-black px-6 py-3 rounded-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105 text-center"
                 >
                   <Github size={20} />
                   View Code
@@ -277,23 +252,23 @@ const CaseStudy = () => {
         {/* Problem Statement */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-400/20 rounded-2xl blur-xl"></div>
-            <div className="relative bg-purple-900/40 backdrop-blur-xl rounded-2xl border border-blue-500/20 p-8">
-              <h2 className="text-3xl font-bold text-blue-100 mb-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-200/50 to-gray-300/50 rounded-2xl blur-xl"></div>
+            <div className="relative bg-gray-50/80 backdrop-blur-xl rounded-2xl border border-gray-200 p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 {project.problemStatement.title}
               </h2>
-              <p className="text-blue-300 text-lg leading-relaxed mb-6">
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
                 {project.problemStatement.description}
               </p>
 
-              <h3 className="text-xl font-semibold text-purple-200 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Key Challenges:
               </h3>
               <ul className="space-y-3">
                 {project.problemStatement.challenges.map((challenge, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-blue-300">{challenge}</span>
+                    <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">{challenge}</span>
                   </li>
                 ))}
               </ul>
@@ -304,20 +279,22 @@ const CaseStudy = () => {
         {/* Solution & Features */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-400/20 rounded-2xl blur-xl"></div>
-            <div className="relative bg-purple-900/40 backdrop-blur-xl rounded-2xl border border-blue-500/20 p-8">
-              <h2 className="text-3xl font-bold text-blue-100 mb-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-200/50 to-gray-300/50 rounded-2xl blur-xl"></div>
+            <div className="relative bg-gray-50/80 backdrop-blur-xl rounded-2xl border border-gray-200 p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 {project.solution.title}
               </h2>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {project.solution.features.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 p-4 bg-blue-900/20 rounded-lg border border-purple-500/30"
+                    className="flex items-start gap-3 p-4 bg-white/80 rounded-lg border border-gray-200 shadow-sm"
                   >
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-blue-300">{feature}</span>
+                    <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm sm:text-base">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -328,89 +305,89 @@ const CaseStudy = () => {
         {/* Tech Stack */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-400/20 rounded-2xl blur-xl"></div>
-            <div className="relative bg-purple-900/40 backdrop-blur-xl rounded-2xl border border-blue-500/20 p-8">
-              <h2 className="text-3xl font-bold text-blue-100 mb-8">
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-200/50 to-gray-300/50 rounded-2xl blur-xl"></div>
+            <div className="relative bg-gray-50/80 backdrop-blur-xl rounded-2xl border border-gray-200 p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
                 Technology Stack
               </h2>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <Monitor size={24} className="text-purple-300" />
-                    <h3 className="text-xl font-semibold text-blue-100">
+                    <Monitor size={24} className="text-black" />
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
                       Frontend
                     </h3>
                   </div>
                   <div className="space-y-2">
                     {project.techStack.frontend.map((tech, index) => (
-                      <div
+                      <span
                         key={index}
-                        className="flex items-center gap-2 bg-blue-900/30 text-blue-300 px-3 py-2 rounded-lg text-sm border border-purple-500/30"
+                        className="flex items-center gap-2 bg-white/80 text-gray-800 px-3 py-2 rounded-lg text-sm border border-gray-300 shadow-sm"
                       >
                         {techIcons[tech]}
-                        <span>{tech}</span>
-                      </div>
+                        {tech}
+                      </span>
                     ))}
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <Server size={24} className="text-purple-300" />
-                    <h3 className="text-xl font-semibold text-blue-100">
+                    <Server size={24} className="text-gray-700" />
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
                       Backend
                     </h3>
                   </div>
                   <div className="space-y-2">
                     {project.techStack.backend.map((tech, index) => (
-                      <div
+                      <span
                         key={index}
-                        className="flex items-center gap-2 bg-blue-900/30 text-blue-300 px-3 py-2 rounded-lg text-sm border border-purple-500/30"
+                        className="flex items-center gap-2 bg-gray-100/80 text-gray-800 px-3 py-2 rounded-lg text-sm border border-gray-300 shadow-sm"
                       >
                         {techIcons[tech]}
-                        <span>{tech}</span>
-                      </div>
+                        {tech}
+                      </span>
                     ))}
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <Database size={24} className="text-purple-300" />
-                    <h3 className="text-xl font-semibold text-blue-100">
+                    <Database size={24} className="text-gray-600" />
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
                       Database
                     </h3>
                   </div>
                   <div className="space-y-2">
                     {project.techStack.database.map((tech, index) => (
-                      <div
+                      <span
                         key={index}
-                        className="flex items-center gap-2 bg-blue-900/30 text-blue-300 px-3 py-2 rounded-lg text-sm border border-purple-500/30"
+                        className="flex items-center gap-2 bg-gray-200/80 text-gray-800 px-3 py-2 rounded-lg text-sm border border-gray-300 shadow-sm"
                       >
                         {techIcons[tech]}
-                        <span>{tech}</span>
-                      </div>
+                        {tech}
+                      </span>
                     ))}
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <Users size={24} className="text-purple-300" />
-                    <h3 className="text-xl font-semibold text-blue-100">
+                    <Users size={24} className="text-gray-600" />
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
                       Tools
                     </h3>
                   </div>
                   <div className="space-y-2">
                     {project.techStack.tools.map((tech, index) => (
-                      <div
+                      <span
                         key={index}
-                        className="flex items-center gap-2 bg-blue-900/30 text-blue-300 px-3 py-2 rounded-lg text-sm border border-purple-500/30"
+                        className="flex items-center gap-2 bg-gray-300/50 text-gray-800 px-3 py-2 rounded-lg text-sm border border-gray-300 shadow-sm"
                       >
                         {techIcons[tech]}
-                        <span>{tech}</span>
-                      </div>
+                        {tech}
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -419,36 +396,34 @@ const CaseStudy = () => {
           </div>
         </div>
 
-        {/* Architecture, Database Design & Results follow the same purple/blue theme ... */}
-
         {/* Architecture */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-400/20 rounded-2xl blur-xl"></div>
-            <div className="relative bg-purple-900/50 backdrop-blur-xl rounded-2xl border border-blue-500/20 p-8">
-              <h2 className="text-3xl font-bold text-purple-100 mb-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-200/50 to-gray-300/50 rounded-2xl blur-xl"></div>
+            <div className="relative bg-gray-50/80 backdrop-blur-xl rounded-2xl border border-gray-200 p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 {project.architecture.title}
               </h2>
-              <p className="text-blue-200 text-lg leading-relaxed mb-8">
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
                 {project.architecture.description}
               </p>
 
               {/* Architecture Diagram */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-purple-100 mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   System Architecture Diagram
                 </h3>
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-400/10 rounded-lg blur-sm"></div>
-                  <div className="relative bg-blue-900/30 rounded-lg border border-purple-500/20 p-4">
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-100/50 to-gray-200/50 rounded-lg blur-sm"></div>
+                  <div className="relative bg-white/80 rounded-lg border border-gray-300 p-4">
                     <img
                       src={image1}
                       alt="System Architecture Diagram"
-                      className="w-full max-h-[28rem] object-contain rounded-lg shadow-lg"
+                      className="w-full max-h-[20rem] sm:max-h-[28rem] object-contain rounded-lg shadow-lg"
                     />
-                   {/* <p className="text-sm text-blue-300 mt-2 text-center">
-                    Replace this with your actual system architecture diagram
-                    </p> */}
+                    <p className="text-sm text-gray-500 mt-2 text-center">
+                      Replace this with your actual system architecture diagram
+                    </p>
                   </div>
                 </div>
               </div>
@@ -457,20 +432,22 @@ const CaseStudy = () => {
                 {project.architecture.layers.map((layer, index) => (
                   <div
                     key={index}
-                    className="p-6 bg-purple-800/40 rounded-lg border border-blue-500/20"
+                    className="p-4 sm:p-6 bg-white/80 rounded-lg border border-gray-200 shadow-sm"
                   >
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-400 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                      <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white font-bold text-sm">
                         {index + 1}
                       </div>
-                      <h3 className="text-xl font-semibold text-purple-100">
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
                         {layer.name}
                       </h3>
                     </div>
-                    <p className="text-blue-300 font-medium mb-2">
+                    <p className="text-gray-800 font-medium mb-2">
                       {layer.tech}
                     </p>
-                    <p className="text-blue-200">{layer.description}</p>
+                    <p className="text-gray-700 text-sm sm:text-base">
+                      {layer.description}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -481,53 +458,53 @@ const CaseStudy = () => {
         {/* Database Design */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-400/20 rounded-2xl blur-xl"></div>
-            <div className="relative bg-purple-900/50 backdrop-blur-xl rounded-2xl border border-blue-500/20 p-8">
-              <h2 className="text-3xl font-bold text-purple-100 mb-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-200/50 to-gray-300/50 rounded-2xl blur-xl"></div>
+            <div className="relative bg-gray-50/80 backdrop-blur-xl rounded-2xl border border-gray-200 p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 {project.database.title}
               </h2>
-              <p className="text-blue-200 text-lg leading-relaxed mb-8">
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
                 {project.database.description}
               </p>
 
               {/* Database Schema Diagram */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-purple-100 mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Database Schema Diagram
                 </h3>
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-400/10 rounded-lg blur-sm"></div>
-                  <div className="relative bg-blue-900/30 rounded-lg border border-purple-500/20 p-4">
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-100/50 to-gray-200/50 rounded-lg blur-sm"></div>
+                  <div className="relative bg-white/80 rounded-lg border border-gray-300 p-4">
                     <img
                       src={image2}
                       alt="Database Schema Diagram"
-                      className="w-full max-h-[28rem] object-contain rounded-lg shadow-lg"
+                      className="w-full max-h-[20rem] sm:max-h-[28rem] object-contain rounded-lg shadow-lg"
                     />
-                    <p className="text-sm text-blue-300 mt-2 text-center">
+                    <p className="text-sm text-gray-500 mt-2 text-center">
                       
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {project.database.collections.map((collection, index) => (
                   <div
                     key={index}
-                    className="p-6 bg-blue-800/40 rounded-lg border border-purple-500/20"
+                    className="p-4 sm:p-6 bg-white/80 rounded-lg border border-gray-200 shadow-sm"
                   >
-                    <h3 className="text-xl font-semibold text-purple-300 mb-3">
+                    <h3 className="text-lg sm:text-xl font-semibold text-black mb-3">
                       {collection.name}
                     </h3>
                     <div className="mb-4">
-                      <h4 className="text-sm font-medium text-purple-200 mb-2">
+                      <h4 className="text-sm font-medium text-gray-700 mb-2">
                         Fields:
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {collection.fields.map((field, fieldIndex) => (
                           <span
                             key={fieldIndex}
-                            className="bg-purple-500/20 text-blue-200 px-2 py-1 rounded text-xs border border-purple-400/30"
+                            className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs border border-gray-300"
                           >
                             {field}
                           </span>
@@ -535,10 +512,10 @@ const CaseStudy = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-purple-200 mb-2">
+                      <h4 className="text-sm font-medium text-gray-700 mb-2">
                         Relationships:
                       </h4>
-                      <p className="text-blue-300 text-sm">
+                      <p className="text-gray-600 text-sm">
                         {collection.relationships}
                       </p>
                     </div>
@@ -552,30 +529,32 @@ const CaseStudy = () => {
         {/* Results */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-400/20 rounded-2xl blur-xl"></div>
-            <div className="relative bg-purple-900/50 backdrop-blur-xl rounded-2xl border border-blue-500/20 p-8">
-              <h2 className="text-3xl font-bold text-purple-100 mb-8">
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-200/50 to-gray-300/50 rounded-2xl blur-xl"></div>
+            <div className="relative bg-gray-50/80 backdrop-blur-xl rounded-2xl border border-gray-200 p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
                 {project.results.title}
               </h2>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {project.results.metrics.map((metric, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 p-4 bg-blue-800/30 rounded-lg border border-purple-500/20"
+                    className="flex items-center gap-4 p-4 bg-white/80 rounded-lg border border-gray-200 shadow-sm"
                   >
-                    <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full flex-shrink-0"></div>
-                    <span className="text-blue-200">{metric}</span>
+                    <div className="w-3 h-3 bg-black rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm sm:text-base">
+                      {metric}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
-            <Footer />
           </div>
         </div>
+
+        <Footer />
       </div>
     </div>
   );
 };
-
 export default CaseStudy;

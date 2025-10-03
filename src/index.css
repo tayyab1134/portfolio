@@ -1,6 +1,6 @@
-@import "tailwindcss";
 
-:root {
+
+/*:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -68,4 +68,18 @@ button:focus-visible {
     background-color: #ffffff;
     color: #000000;
   }
+}
+  */
+/* Tailwind v4 + design tokens + global overflow fix */
+@import "tailwindcss";
+
+
+
+/* Global fixes and base */
+
+
+/* Typography scale */
+
+html {
+  scroll-behavior: smooth;
 }

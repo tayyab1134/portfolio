@@ -46,48 +46,22 @@ function App() {
   };
 
   const HomePage = () => (
-    <div className="relative isolate overflow-hidden antialiased bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-      {/* Background layers */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
-      >
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800" />
-
-        {/* Subtle colored gradients (no animation) */}
-        <div
-          className="absolute inset-0
-      [background:
-        radial-gradient(800px_520px_at_12%_14%,rgba(59,130,246,0.1),transparent_55%),
-        radial-gradient(900px_560px_at_88%_18%,rgba(139,92,246,0.08),transparent_58%),
-        radial-gradient(900px_640px_at_50%_96%,rgba(236,72,153,0.07),transparent_60%)
-      ]
-      [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]"
-        />
-
-        {/* Subtle grid */}
-        <div
-          className="absolute inset-0
-      bg-[linear-gradient(to_right,rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.02)_1px,transparent_1px)]
-      [background-size:40px_40px]
-      opacity-10
-      [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]"
-        />
-
-        {/* Optional noise texture */}
-        <div className="absolute inset-0 opacity-[.03] mix-blend-overlay bg-[url('/noise.svg')]" />
-
-        {/* Soft blobs (no animation) */}
-        <div className="absolute -top-40 -left-40 h-[36rem] w-[36rem] rounded-full bg-blue-300/20 blur-3xl dark:bg-blue-800/30" />
-        <div className="absolute -bottom-40 -right-28 h-[32rem] w-[32rem] rounded-full bg-purple-300/20 blur-3xl dark:bg-purple-900/30" />
+    <div className="bg-slate-900 text-white overflow-x-hidden">
+      {/* Animated Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-emerald-900/20 to-teal-900/30"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
       </div>
 
-      {/* Page Content */}
       <Hero scrollToSection={scrollToSection} />
       <About />
       <Skills />
       <Projects />
+
       <Contact />
       <Footer />
     </div>
