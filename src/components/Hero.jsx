@@ -54,7 +54,8 @@ const Hero = ({ scrollToSection }) => {
               </button>
 
               <a
-                download="Tayyab_Ali_Resume.pdf"
+                href="/TayyabAliResume.pdf"
+                download="TayyabAliResume.pdf"
                 className="group border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-xl hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 font-medium transform hover:scale-105"
               >
                 <span className="flex items-center justify-center space-x-2">
