@@ -421,9 +421,7 @@ const CaseStudy = () => {
                       alt="System Architecture Diagram"
                       className="w-full max-h-[20rem] sm:max-h-[28rem] object-contain rounded-lg shadow-lg"
                     />
-                    <p className="text-sm text-gray-500 mt-2 text-center">
-                      Replace this with your actual system architecture diagram
-                    </p>
+                    <p className="text-sm text-gray-500 mt-2 text-center"></p>
                   </div>
                 </div>
               </div>
@@ -480,9 +478,7 @@ const CaseStudy = () => {
                       alt="Database Schema Diagram"
                       className="w-full max-h-[20rem] sm:max-h-[28rem] object-contain rounded-lg shadow-lg"
                     />
-                    <p className="text-sm text-gray-500 mt-2 text-center">
-                      
-                    </p>
+                    <p className="text-sm text-gray-500 mt-2 text-center"></p>
                   </div>
                 </div>
               </div>
